@@ -48,28 +48,19 @@ class Window():
 
         # Button
 
-        self.button_sum = Button(self.win, text='Sum', width=20, command= self.call_controller_sum)
+        self.button_sum = Button(self.win, text='Sum', width=20, command= lambda : self.call_controller('+'))
         self.button_sum.place(x=80, y= 200)
 
-        self.button_rest = Button(self.win, text='Rest', width=20, command= self.call_controller_rest)
+        self.button_rest = Button(self.win, text='Rest', width=20, command= lambda : self.call_controller('-'))
         self.button_rest.place(x=80, y= 220)
 
-        self.button_mult = Button(self.win, text='Multiply', width=20, command= self.call_controller_mult)
+        self.button_mult = Button(self.win, text='Multiply', width=20, command= lambda : self.call_controller('*'))
         self.button_mult.place(x=80, y= 240)
 
-        self.button_div = Button(self.win, text='Divide', width=20, command= self.call_controller_div)
+        self.button_div = Button(self.win, text='Divide', width=20, command= lambda : self.call_controller('/'))
         self.button_div.place(x=80, y= 260)
 
     # Functions
 
-    def call_controller_sum(self):
-        Controller.get_data(self, self.entry1, self.entry2, '+', self.entry3)
-
-    def call_controller_rest(self):
-        Controller.get_data(self, self.entry1, self.entry2, '-', self.entry3)
-
-    def call_controller_mult(self):
-        Controller.get_data(self, self.entry1, self.entry2, '*', self.entry3)
-
-    def call_controller_div(self):
-        Controller.get_data(self, self.entry1, self.entry2, '/', self.entry3)
+    def call_controller(self, sign):
+        Controller.get_data(self, self.entry1, self.entry2, sign, self.entry3)
