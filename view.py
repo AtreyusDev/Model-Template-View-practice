@@ -20,8 +20,8 @@ class Window():
     def widgets(self):
 
         # Title
-        self.title = Label(self.win, text='Sum two numbers', bg='#e66312')
-        self.title.place(x= 100, y= 20)
+        self.title = Label(self.win, text='Calculate Two Numbers', bg='#e66312')
+        self.title.place(x= 85, y= 20)
 
         # Entry
         self.label1 = Label(self.win, text='First number:', bg='#e66312')
